@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} Signup {% endblock %}
+{% block content %}
+<div class="modal modal-signin position-static d-block bg-light rounded-4 mb-2" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <h1 class="fw-bold mb-0 fs-2">Signup</h1>
+        </div>
+        <div class="modal-body p-5 pt-0">
+          {% load bootstrap5 %}
+          <form class=""  action="{% url 'user_signup' %}" method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <hr class="my-4">
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

@@ -17,13 +17,22 @@
           </li>
         </ul>
 
-        <ul class="navbar-nav float-end">
+        <ul class="navbar-nav float-end d-flex align-items-center">
+            {% if request.user.is_authenticated %}
             <li class="nav-item">
-                <a class="btn btn-outline-light" href="#">Login</a>
+              <p class="text-light mb-0 me-4" href="#">Hey, {{ request.user.username }}</p>
+            </li> 
+            <li class="nav-item">
+              <a class="btn btn-outline-danger" href="{% url 'user_logout' %}">Logout</a>
+            </li> 
+            {% else %}
+            <li class="nav-item">
+                <a class="btn btn-outline-light" href="{% url 'user_login' %}">Login</a>
             </li> 
             <li class="nav-item ms-2">
-                <a class="btn btn-danger" href="#">Signup</a>
+                <a class="btn btn-danger" href="{% url 'user_signup' %}">Signup</a>
             </li> 
+            {% endif %}
         </ul>
       </div>
     </div>
