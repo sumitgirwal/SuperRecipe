@@ -13,8 +13,8 @@
             {% csrf_token %}
             {% bootstrap_form form %}
             <hr class="my-4">
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
-            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Signup</button>
+            <small class="text-muted">Create a <a href="{% url 'user_login' %}">new account.</a></small>
           </form>
         </div>
       </div>
