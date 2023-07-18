@@ -14,7 +14,42 @@
     
     <div class="container">
       {% include 'messages.html' %}
-      {% block content %}{% endblock %}
+      <!-- {% block content %}{% endblock %} -->
+      <div class="row g-5 mt-3 d-flex justify-content-between">
+        <div class="col-3">
+            <h1>Recipes 🧑‍🍳</h1>
+            <hr>
+            <div class="row">
+                <h4 class="d-flex justify-content-between align-items-center">Filter by: <a href="#" class="text-danger fs-6 text-decoration-none"> Clear Filter</a></h4>
+                <a href="#" class="text-dark text-decoration-none">Contest Winners</a>
+                <a href="#" class="text-dark text-decoration-none">Feautured</a>
+                <a href="#" class="text-dark text-decoration-none">Popular</a>
+            </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-lg-12 col-md-6  d-flex justify-content-between align-items-center">
+              <input class="form-control" type="text" name="search" placeholder="Search recipes and more...">
+              <button class="btn btn-dark rounded-1 px-4 ms-2">Search</button>
+              <button class="btn btn-dark rounded-1 px-4 ms-2">Sort&nbsp;By</button>
+            </div>
+          </div>
+            <div class="row mt-3 g-4">
+               
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card 2 Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card 2</h5>
+                    <p class="card-text">This is the content of Card 2.</p>
+                  </div>
+                </div>
+              </div>
+               
+               
+            </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/htmx.org@1.9.3" integrity="sha384-lVb3Rd/Ca0AxaoZg5sACe8FJKF0tnUgR2Kd7ehUOG5GCcROv5uBIZsOqovBAcWua" crossorigin="anonymous"></script>
